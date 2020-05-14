@@ -1,8 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
 body {
-  background-image: url("https://i.pinimg.com/originals/fd/8f/8d/fd8f8da060afe72035e078e5fe661452.png");
+  background-image: url("../img/background.png");
   background-size: auto 100vh;
   font-family: Arial;
+  font-size: 10px;
   height: 100vh;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+header {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -16,6 +36,14 @@ a:hover {
 
 .menu {
   background-color: white;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+}
+
+.menu a {
+  display: block;
+  padding: 4px;
 }
 
 .menu ul {
@@ -29,10 +57,19 @@ a:hover {
 
 .site-subtitle,
 .site-title {
-  color: whitesmoke;
+  color: slateblue;
   text-align: center;
+}
+
+.site-title {
+  font-size: 4em;
 }
 
 .site-subtitle {
   font-style: italic;
+}
+
+.img-project {
+  width: 180px;
+  height: 180px;  
 }
