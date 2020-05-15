@@ -7,10 +7,17 @@
 body {
   background-image: url("../img/background.png");
   background-size: auto 100vh;
-  font-family: Arial;
+  font-family: 'Oswald', sans-serif;
   font-size: 10px;
   height: 100vh;
 }
+
+/*
+Fonts
+font-family: 'Architects Daughter', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Oswald', sans-serif;
+*/
 
 @media (min-width: 400px) {
   body {
@@ -34,14 +41,32 @@ a:hover {
   text-decoration: underline;
 }
 
+.background1 {
+  background-color: #454140;
+}
+
+.background2 {
+  background-color: #bd5734;
+}
+
+.background3 {
+  background-color: #587e76;
+}
+
+.background4 {
+  background-color: #563f46;
+}    
+
 .menu {
-  background-color: white;
+  background-color: black;
+  font-size: 1.2em;
   position: fixed;
   top: 0px;
   width: 100vw;
 }
 
 .menu a {
+  color: whitesmoke;
   display: block;
   padding: 4px;
 }
@@ -57,19 +82,61 @@ a:hover {
 
 .site-subtitle,
 .site-title {
-  color: slateblue;
   text-align: center;
 }
 
 .site-title {
+  color: slateblue;
+  font-family: 'Architects Daughter', cursive;
   font-size: 4em;
 }
 
 .site-subtitle {
+  color: slategray;
+  font-family: 'Shadows Into Light', cursive;
   font-style: italic;
 }
 
+.site-area {
+  /* background-color: red; */
+  padding: 3em;
+  min-height: 100vh;
+}
+
+.site-area h2 {
+  color: whitesmoke;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.site-area .grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 220px;
+  justify-content: center;
+}
+
+@media (min-width: 568px) {
+  .site-area .grid {
+    grid-template-columns: repeat(2, 220px);
+  }
+}
+
+@media (min-width: 768px) {
+  .site-area .grid {
+    align-content: center;
+    grid-template-columns: repeat(3, 220px);
+    height: calc(100vh - 20em);
+  }
+}
+
+.site-area figure {
+  text-align: center;
+}
+
 .img-project {
-  width: 180px;
   height: 180px;  
+  width: 220px;
+  object-fit: cover;
+  border-radius: 4px;
 }
