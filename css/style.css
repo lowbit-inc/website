@@ -37,8 +37,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+figcaption,
+h2 {
+  cursor: default;
 }
 
 .background1 {
@@ -63,12 +64,20 @@ a:hover {
   position: fixed;
   top: 0px;
   width: 100vw;
+  z-index: 100;
 }
 
 .menu a {
+  border-radius: 4px;
   color: whitesmoke;
   display: block;
   padding: 4px;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.menu a:hover {
+  color: black;
+  background-color: whitesmoke;
 }
 
 .menu ul {
@@ -86,24 +95,43 @@ a:hover {
 }
 
 .site-title {
+  animation: linear forwards 1s 1s animationTitle;
   color: slateblue;
   font-family: 'Architects Daughter', cursive;
   font-size: 4em;
+  opacity: 0;
+}
+
+@keyframes animationTitle {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .site-subtitle {
+  animation: ease-out forwards 1s 3s animationSubtitle;
   color: slategray;
   font-family: 'Shadows Into Light', cursive;
   font-style: italic;
+  opacity: 0;
+  transform: translateY(2vh);
+}
+
+@keyframes animationSubtitle {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .site-area {
-  /* background-color: red; */
   padding: 3em;
   min-height: 100vh;
 }
 
-.site-area h2 {
+.site-area h2,
+.site-contact h2 {
   color: whitesmoke;
   font-size: 2em;
   margin-bottom: 1em;
@@ -134,9 +162,37 @@ a:hover {
   text-align: center;
 }
 
+.site-contact {
+  padding: 3em;
+}
+
+.site-contact .icons {
+  text-align: center;
+}
+
+.site-contact a {
+  color: whitesmoke;
+  font-size: 3em;
+  opacity: 80%;
+  transition: text-shadow 0.2s;
+}
+
+.site-contact a:active,
+.site-contact a:hover {
+  text-shadow: 0px 0px 16px rgba(255,255,255,0.8);
+}
+
 .img-project {
   height: 180px;  
   width: 220px;
   object-fit: cover;
   border-radius: 4px;
+  /* transform: scale(1); */
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.img-project:hover {
+  box-shadow: rgba(0,0,0,0.5) 0px 0px 32px;
+  cursor: pointer;
+  transform: scale(1.05);
 }

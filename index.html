@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  
 <head>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Oswald:wght@200;300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/199e789040.js" crossorigin="anonymous"></script>
   <title>Lowbit</title>
 </head>
 
@@ -13,10 +15,11 @@
   <header>
     <nav class="menu">
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Art</a></li>
+        <li><a href="#"><i class="fas fa-home"></i></a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div>
@@ -25,7 +28,7 @@
     </div>
   </header>
 
-  <section class="site-area background1">
+  <section id="about" class="site-area background1">
     <h2>About</h2>
 
     <div class="grid">
@@ -41,15 +44,11 @@
         <img class="img-project" src="img/dervidie.jpg" alt="Dervidie" />
         <figcaption>Dervidie</figcaption>
       </figure>  
-      <figure>
-        <img class="img-project" src="img/contact.jpg" alt="Contact" />
-        <figcaption>Contact</figcaption>
-      </figure>  
     </div>
 
   </section>
 
-  <section class="site-area background2">
+  <section id="projects" class="site-area background2">
     <h2>Projects</h2>
 
     <div class="grid">
@@ -72,8 +71,8 @@
     </div>
   </section>
 
-  <section class="site-area background3">
-    <h2>Music</h2>
+  <section id="media" class="site-area background3">
+    <h2>Media</h2>
 
     <div class="grid">
       <figure>
@@ -84,18 +83,30 @@
         <img class="img-project" src="img/guitar.jpg" alt="Guitar" />
         <figcaption>Guitar</figcaption>
       </figure>
-    </div>
-
-  </section>
-
-  <section class="site-area background4">
-    <h2>Art</h2>
-
-    <div class="grid">
       <figure>
         <img class="img-project" src="img/pixel-art.jpg" alt="Pixel Art" />
         <figcaption>Pixel Art</figcaption>
       </figure>
+    </div>
+
+  </section>
+
+  <section id="contact" class="site-contact background4">
+    <h2>Contact</h2>
+
+    <div class="grid icons">
+      <a target="_blank" href="https://github.com/fewbits">
+        <i class="fab fa-github-alt"></i>
+      </a>
+      <a target="_blank" href="https://linkedin.com/in/lowbit">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a target="_blank" href="https://soundcloud.com/fewbits">
+        <i class="fab fa-soundcloud"></i>
+      </a>
+      <a href="mailto:lowbit@icloud.com">
+        <i class="far fa-envelope"></i>
+      </a>
     </div>
 
   </section>
